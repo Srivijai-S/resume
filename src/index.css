@@ -1,3 +1,8 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .navlist {
   display: flex;
   position: absolute;
@@ -7,13 +12,17 @@
   border-radius: 50%;
 }
 .full {
-  background-color: yellow;
   width: 100%;
   height: 100vh;
-  padding: 2vh;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(209, 162, 229),
+    rgb(40, 4, 56)
+  );
 }
-img {
-  background-color: yellow;
+.icon {
   margin: 20px;
 }
 .name {
@@ -23,12 +32,13 @@ img {
 }
 .home {
   display: block;
-  background-color: aliceblue;
+  background-color: rgba(240, 248, 255, 0.703);
   position: absolute;
   top: 20%;
   left: 15%;
   width: 550px;
   height: 500px;
+  border-radius: 3%;
 }
 .ProjectOpen {
   position: absolute;
@@ -57,15 +67,92 @@ img {
   height: 45px;
   width: 50px;
 }
-icon:hover {
-  background-color: rgb(195, 195, 55);
+.icon:hover {
+  scale: 1.2;
   border-radius: 35%;
 }
 .profilePic {
   position: absolute;
-  right: 1%;
+  right: 30%;
+  top: 10%;
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
+  transition: 0.5s all ease-in-out;
+}
+.profilePic:hover {
+  scale: 1.1;
+  transition: 0.5s all ease-in-out;
+}
+h1 {
+  font-family: Didot, "Didot LT STD", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  position: absolute;
+  top: 47%;
+  right: 27%;
+  font-size: 5vh;
+  letter-spacing: 10px;
+}
+.profile_line {
+  height: 0.1em;
+
+  width: 100px;
+  position: absolute;
+  top: 61%;
+  right: 38%;
+  background-color: black;
+}
+h3 {
+  font-family: Didot, "Didot LT STD", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  position: absolute;
+  font-weight: 100;
+  top: 60%;
+  right: 37%;
+}
+.summary {
+  position: absolute;
+  font-size: 60px;
+  display: block;
+  top: 11%;
+  left: 52%;
+  height: 500px;
+  width: 500px;
+}
+.summaryBody {
+  font-size: 40px;
+}
+.btn_resume {
+  background-color: rgba(142, 33, 142, 0.878);
+  position: relative;
+  border-radius: 20px;
+  bottom: 20px;
+  left: 50px;
+  height: 40px;
+  width: 120px;
+  font-size: 15px;
+  border-color: rgb(255, 255, 255);
+}
+
+.btn_resume:hover,
+.btn_project:hover {
+  background-color: rgba(136, 11, 136, 0.878);
+}
+.btn_project {
+  background-color: rgba(142, 33, 142, 0.878);
+  position: relative;
+  bottom: 20px;
+  right: -200px;
+  height: 40px;
+  width: 120px;
+  border-radius: 20px;
+  font-size: 15px;
+  border-color: rgb(255, 255, 255);
+}
+.summarydetail {
+  font-family: cursive;
+  font-size: 20px;
+  color: white;
+  font-weight: 0;
 }
