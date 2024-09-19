@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.05906d60.css",
-    "main.js": "/resume/static/js/main.711de607.js",
+    "main.css": "/resume/static/css/main.1c7d8488.css",
+    "main.js": "/resume/static/js/main.868e4750.js",
     "static/media/srivijaiPic.jpg": "/resume/static/media/srivijaiPic.c22db7b5faf4f8e26b49.jpg",
     "index.html": "/resume/index.html",
-    "main.05906d60.css.map": "/resume/static/css/main.05906d60.css.map",
-    "main.711de607.js.map": "/resume/static/js/main.711de607.js.map"
+    "main.1c7d8488.css.map": "/resume/static/css/main.1c7d8488.css.map",
+    "main.868e4750.js.map": "/resume/static/js/main.868e4750.js.map"
   },
   "entrypoints": [
-    "static/css/main.05906d60.css",
-    "static/js/main.711de607.js"
+    "static/css/main.1c7d8488.css",
+    "static/js/main.868e4750.js"
   ]
 }
