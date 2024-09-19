@@ -57,7 +57,7 @@ img {
   height: 45px;
   width: 50px;
 }
-img:hover {
+icon:hover {
   background-color: rgb(195, 195, 55);
   border-radius: 35%;
 }
