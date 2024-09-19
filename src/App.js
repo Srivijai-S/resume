@@ -29,10 +29,10 @@ function NavBar() {
     <div className="navprofile">
       <span className="name">SrivijaiS</span>
       <div className="navlist">
-        <img src={home} alt="home" onClick={handleHome} />
-        <img src={prochat} alt="project" onClick={handleProject} />
+        <img clasName="icon" src={home} alt="home" onClick={handleHome} />
+        <img clasName="icon" src={prochat} alt="project" onClick={handleProject} />
 
-        <img src={mail} alt="mail" onClick={handleMail} />
+        <img clasName="icon" src={mail} alt="mail" onClick={handleMail} />
       </div>
 
       {maill && (
