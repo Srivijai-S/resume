@@ -1,18 +1,25 @@
 import React from "react";
 import home from "./img/house.png";
-import mail from "./img/envelope-simple.png";
+import list from "./img/list.png";
 import { useState } from "react";
 import ProfilePic from "./img/srivijaiPic.jpg";
 import gmail from "./img/microsoft-outlook-logo.png";
 import phoneimg from "./img/phone.png";
 import pdf from "./SrivijaiSResume.pdf";
-
+import cancel from "./img/x.png";
 export default function App() {
   // function handleClose() {
   //   setHome(() => !maill);
   // }
   return (
     <div className="full">
+      <span className="astroid" />
+      <span className="astroid3" />
+      <span className="astroid2" />
+      <div className="star"> ⭐</div>
+      <div className="star2"> ⭐</div>
+      <div className="star3"> ⭐</div>
+      <div className="star4"> ⭐</div>
       <NavBar />
       <Profile />
       <Summary />
@@ -21,9 +28,9 @@ export default function App() {
 }
 function NavBar() {
   const [homee, setHome] = useState(false);
-  const [maill, setMail] = useState(false);
-  function handleMail() {
-    setMail(() => !maill);
+  const [listOpen, setlistOpen] = useState(false);
+  function handleList() {
+    setlistOpen(() => !listOpen);
   }
   function handleHome() {
     setHome(() => !homee);
@@ -39,18 +46,28 @@ function NavBar() {
           alt="home"
           onClick={handleHome}
         />
-
-        <img
-          style={{ cursor: "pointer" }}
-          className="icon"
-          src={mail}
-          alt="mail"
-          onClick={handleMail}
-        />
+        {listOpen && (
+          <img
+            style={{ cursor: "pointer" }}
+            className="listicon"
+            src={cancel}
+            alt="cancel"
+            onClick={handleList}
+          />
+        )}
+        {!listOpen && (
+          <img
+            style={{ cursor: "pointer" }}
+            className="listicon"
+            src={list}
+            alt="list"
+            onClick={handleList}
+          />
+        )}
       </div>
 
-      {maill && (
-        <div className="MailOpen">
+      {listOpen && (
+        <div className="listOpen" style={{ color: "white" }}>
           <p>
             <center>
               <br />
@@ -71,6 +88,7 @@ function NavBar() {
                   style={{
                     position: "absolute",
                     width: "35px",
+                    height: "35px",
                     top: "62px",
                     left: "5px",
                     cursor: "pointer",
@@ -101,29 +119,33 @@ function Profile() {
 function Summary() {
   return (
     <div className="summary">
-      <p>
-        <center>Hello</center>
-
-        <p className="summaryBody">Here's who I am & what I do</p>
+      <p className="glow">
+        <center>Hello!</center>
       </p>
-
+      <p style={{ color: "white " }} className="summaryBody">
+        <center>Frontend Developer</center>
+      </p>
       <a className="resumeP" href={pdf}>
         <button className="btn_resume">
           <strong> RESUME</strong>
         </button>
       </a>
-
       <button className="btn_project">
         <strong>PROJECTS</strong>
       </button>
       <p className="summarydetail">
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skilled
-        and proficient entry-level website designer with tremendous dedication
-        to work and a demonstrated ability in customer administration and
-        satisfaction. A passionate designer can develop wireframes with
-        specialized functionality to improve the user's experience.
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ambitious and
+        adaptable graduate with <Degree /> Possessing strong interpersonal
+        skills, I am eager to kickstart my career and contribute positively to a
+        forwardthinking organization.
       </p>
+    </div>
+  );
+}
+function Degree() {
+  return (
+    <div className="degree" style={{ fontSize: "20px" }}>
+      Master's degree in Computer Application.
     </div>
   );
 }
